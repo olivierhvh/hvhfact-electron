@@ -1,0 +1,51 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "build": {
+    "appId": "hvh.systems.hvhfact",
+    "productName": "HVH-Fact",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "favicon.ico"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "olivierhvh",
+        "repo": "hvhfact-electron"
+      }
+    ],
+    "nsis": {
+      "installerIcon": "favicon.ico",
+      "uninstallerIcon": "favicon.ico",
+      "runAfterFinish": true
+    }
+  },
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-log": "^4.3.1",
+    "electron-updater": "^4.3.5"
+  }
+}
